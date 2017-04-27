@@ -3,21 +3,12 @@ package main
 import (
 	"log"
 	"net/http"
+
+	"github.com/crevax/chat/templating"
 )
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte(`
-			<html>
-				<head>
-					<title>Chat</title>
-				</head>
-				<body>
-					<h1>Let's Chat!</h1>
-				</body>
-			</html>
-		`))
-	})
+	http.Handle("/", &templating.TemplateHandler{Filename: "chat"})
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal("ListenAndServe:", err)
