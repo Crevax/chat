@@ -10,13 +10,13 @@ import (
 // TemplateHandler ...
 type TemplateHandler struct {
 	once     sync.Once
-	Filename string
+	Filepath []string
 	templ    *template.Template
 }
 
 func (t *TemplateHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	t.once.Do(func() {
-		t.templ = template.Must(template.ParseFiles(filepath.Join("templating", "html", t.Filename+".html")))
+		t.templ = template.Must(template.ParseFiles(filepath.Join(t.Filepath...)))
 	})
 	t.templ.Execute(w, nil)
 }

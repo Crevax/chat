@@ -8,7 +8,7 @@ import (
 )
 
 func main() {
-	http.Handle("/", &templating.TemplateHandler{Filename: "chat"})
+	http.Handle("/", &templating.TemplateHandler{Filepath: []string{"templates", "html", "chat.html"}})
 
 	if err := http.ListenAndServe(":8080", nil); err != nil {
 		log.Fatal("ListenAndServe:", err)
