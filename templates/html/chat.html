@@ -39,7 +39,12 @@
         if (!window["WebSocket"]) {
           alert("Error: Your browser does not support web sockets.");
         } else {
+          {{ if .TLS }}
+          socket = new WebSocket("wss://{{.Host}}/room");
+          {{ else }}
           socket = new WebSocket("ws://{{.Host}}/room");
+          {{ end }}
+
           socket.onclose = function() {
             alert("Connection has been closed");
           }
