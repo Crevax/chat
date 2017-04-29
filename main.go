@@ -11,7 +11,11 @@ import (
 )
 
 func main() {
+	r := newRoom()
 	http.Handle("/", &templating.TemplateHandler{Filepath: []string{"templates", "html", "chat.html"}})
+	http.Handle("/room", r)
+
+	go r.run()
 
 	port := os.Getenv("PORT")
 	if port == "" {
