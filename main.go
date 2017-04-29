@@ -18,6 +18,7 @@ func main() {
 		port = "8080"
 	}
 
+	log.Println("Starting web server on", port)
 	if err := http.ListenAndServe(fmt.Sprintf(":%s", port), nil); err != nil {
 		log.Fatal("ListenAndServe:", err)
 	}
