@@ -8,10 +8,12 @@ import (
 	"fmt"
 
 	"github.com/crevax/chat/templating"
+	"github.com/crevax/chat/trace"
 )
 
 func main() {
 	r := newRoom()
+	r.tracer = trace.New(os.Stdout)
 	http.Handle("/", &templating.TemplateHandler{Filepath: []string{"templates", "html", "chat.html"}})
 	http.Handle("/room", r)
 
