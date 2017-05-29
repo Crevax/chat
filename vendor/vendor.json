@@ -3,10 +3,136 @@
 	"ignore": "test",
 	"package": [
 		{
+			"checksumSHA1": "vvujUY7Q14SI4mHJ2NCQotLaMJY=",
+			"path": "github.com/clbanning/x2j",
+			"revision": "15e4c5e8e752cf6b7f819a601917b48a19258928",
+			"revisionTime": "2016-12-13T16:59:57Z"
+		},
+		{
 			"checksumSHA1": "hEnH6sgR83Qfx7UNnphNNlelmj0=",
 			"path": "github.com/gorilla/websocket",
 			"revision": "a91eba7f97777409bc2c443f5534d41dd20c5720",
 			"revisionTime": "2017-03-19T17:27:27Z"
+		},
+		{
+			"checksumSHA1": "b/G7DysjaGa3URYYRIFWap4PgZo=",
+			"path": "github.com/stretchr/codecs",
+			"revision": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4",
+			"revisionTime": "2017-04-03T06:32:45Z"
+		},
+		{
+			"checksumSHA1": "8x9YIkHP4ZuEFJ4enlK3Hn81lQM=",
+			"path": "github.com/stretchr/codecs/bson",
+			"revision": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4",
+			"revisionTime": "2017-04-03T06:32:45Z"
+		},
+		{
+			"checksumSHA1": "vrrI//H3TW84LNdwIqN9wzG/zVI=",
+			"path": "github.com/stretchr/codecs/constants",
+			"revision": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4",
+			"revisionTime": "2017-04-03T06:32:45Z"
+		},
+		{
+			"checksumSHA1": "Xg4USrN4+g4SxcAtzJ4q0GgfHTE=",
+			"path": "github.com/stretchr/codecs/csv",
+			"revision": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4",
+			"revisionTime": "2017-04-03T06:32:45Z"
+		},
+		{
+			"checksumSHA1": "3UyN7dMAWRZQziuLUyetYJ37zO8=",
+			"path": "github.com/stretchr/codecs/json",
+			"revision": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4",
+			"revisionTime": "2017-04-03T06:32:45Z"
+		},
+		{
+			"checksumSHA1": "PV61E7G/RF9+PwlHei6Y53V3dyE=",
+			"path": "github.com/stretchr/codecs/jsonp",
+			"revision": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4",
+			"revisionTime": "2017-04-03T06:32:45Z"
+		},
+		{
+			"checksumSHA1": "8nFpM2xA6+GbUTyDxUvqA9V/2ac=",
+			"path": "github.com/stretchr/codecs/msgpack",
+			"revision": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4",
+			"revisionTime": "2017-04-03T06:32:45Z"
+		},
+		{
+			"checksumSHA1": "RukBmSA2Qyp8XtfFSQKvbVA5vxo=",
+			"path": "github.com/stretchr/codecs/services",
+			"revision": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4",
+			"revisionTime": "2017-04-03T06:32:45Z"
+		},
+		{
+			"checksumSHA1": "4PVBMTEfNvv+lGP+3//9aSDfacI=",
+			"path": "github.com/stretchr/codecs/xml",
+			"revision": "04a5b1e1910de7aaf00e1d4419d2508247fba1b4",
+			"revisionTime": "2017-04-03T06:32:45Z"
+		},
+		{
+			"checksumSHA1": "1322VYAlamuFCSmau8/Tf3ngLU0=",
+			"path": "github.com/stretchr/gomniauth",
+			"revision": "d89fbe29242917607bee0a8f24279baa0203f975",
+			"revisionTime": "2017-01-23T09:53:58Z"
+		},
+		{
+			"checksumSHA1": "/hUCcOfLRArjy2bC43CQsK75enk=",
+			"path": "github.com/stretchr/gomniauth/common",
+			"revision": "d89fbe29242917607bee0a8f24279baa0203f975",
+			"revisionTime": "2017-01-23T09:53:58Z"
+		},
+		{
+			"checksumSHA1": "Of8PB4hOhMo9x5BO2KLlFwGNSzk=",
+			"path": "github.com/stretchr/gomniauth/oauth2",
+			"revision": "d89fbe29242917607bee0a8f24279baa0203f975",
+			"revisionTime": "2017-01-23T09:53:58Z"
+		},
+		{
+			"checksumSHA1": "kpQ3wy47tIkkHkxjRT0V5QFNkuo=",
+			"path": "github.com/stretchr/gomniauth/providers/google",
+			"revision": "d89fbe29242917607bee0a8f24279baa0203f975",
+			"revisionTime": "2017-01-23T09:53:58Z"
+		},
+		{
+			"checksumSHA1": "K0crHygPTP42i1nLKWphSlvOQJw=",
+			"path": "github.com/stretchr/objx",
+			"revision": "1a9d0bb9f541897e62256577b352fdbc1fb4fd94",
+			"revisionTime": "2015-09-28T12:21:52Z"
+		},
+		{
+			"checksumSHA1": "1ku7TiFH7opIYW1e7QnVdsNK5EE=",
+			"path": "github.com/stretchr/signature",
+			"revision": "168b2a1e1b562bf381d47471e31f5979a2a51cd5",
+			"revisionTime": "2016-01-04T13:21:43Z"
+		},
+		{
+			"checksumSHA1": "665c/ZOvma8jEO+VK7ISzFT0+oI=",
+			"path": "github.com/stretchr/stew/strings",
+			"revision": "80ef0842b48b329a6120607c817a85aff5a2ec71",
+			"revisionTime": "2013-08-12T19:02:56Z"
+		},
+		{
+			"checksumSHA1": "05lvaWg4qIggY2tBfxg2To4cPI4=",
+			"path": "github.com/stretchr/tracer",
+			"revision": "66d3696bba973e1697f7d68413b3f19c6d6e2a7c",
+			"revisionTime": "2014-01-24T18:41:52Z"
+		},
+		{
+			"checksumSHA1": "MxLnUmfrP+r5HfCZM29+WPKebn8=",
+			"path": "github.com/ugorji/go/codec",
+			"revision": "708a42d246822952f38190a8d8c4e6b16a0e600c",
+			"revisionTime": "2017-03-12T11:21:14Z"
+		},
+		{
+			"checksumSHA1": "YsB2DChSV9HxdzHaKATllAUKWSI=",
+			"path": "gopkg.in/mgo.v2/bson",
+			"revision": "3f83fa5005286a7fe593b055f0d7771a7dce4655",
+			"revisionTime": "2016-08-18T02:01:20Z"
+		},
+		{
+			"checksumSHA1": "XQsrqoNT1U0KzLxOFcAZVvqhLfk=",
+			"path": "gopkg.in/mgo.v2/internal/json",
+			"revision": "3f83fa5005286a7fe593b055f0d7771a7dce4655",
+			"revisionTime": "2016-08-18T02:01:20Z"
 		}
 	],
 	"rootPath": "github.com/crevax/chat"
