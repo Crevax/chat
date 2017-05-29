@@ -31,7 +31,7 @@ func main() {
 	gomniauth.SetSecurityKey(os.Getenv("OATH_SECRET_KEY"))
 	gomniauth.WithProviders(
 		google.New(os.Getenv("GOOGLE_OAUTH_ID"), os.Getenv("GOOGLE_OAUTH_SECRET"),
-			"http://localhost:8080/auth/callback/google"),
+			os.Getenv("APP_ROOT")+"/auth/callback/google"),
 	)
 
 	log.Println("Starting web server on", port)
