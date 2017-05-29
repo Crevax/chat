@@ -33,7 +33,7 @@
             return false;
           }
 
-          socket.send(msgBox.value);
+          socket.send(JSON.stringify({"Message": msgBox.value}));
           msgBox.value = "";
           return false;
         }
@@ -48,9 +48,17 @@
             alert("Connection has been closed");
           }
           socket.onmessage = function(evt) {
-            var msg = document.createElement('li');
-            msg.innerHTML = evt.data;
-            messages.appendChild(msg);
+            var msg = JSON.parse(evt.data);
+
+            var msgContainer = document.createElement('li');
+            var msgUser = document.createElement('strong');
+            var msgText = document.createElement('span');
+            msgUser.innerHTML = msg.Name + ": ";
+            msgText.innerHTML = msg.Message;
+
+            msgContainer.appendChild(msgUser);
+            msgContainer.appendChild(msgText);
+            messages.appendChild(msgContainer);
           }
         }
       }
