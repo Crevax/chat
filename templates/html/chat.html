@@ -18,10 +18,10 @@
     <script>
       window.onload = function() {
         var socket = null;
-        var chatbox = document.getElementById("chatbox");
-        var msgBox = chatbox.getElementsByTagName("textarea")[0];
-        var messages = document.getElementById("messages");
-        var connStatus = document.getElementsByClassName("connection-status")[0];
+        var chatbox = document.getElementById('chatbox');
+        var msgBox = chatbox.getElementsByTagName('textarea')[0];
+        var messages = document.getElementById('messages');
+        var connStatus = document.getElementsByClassName('connection-status')[0];
 
         chatbox.onsubmit = function(evt) {
           evt.preventDefault();
@@ -30,24 +30,24 @@
           }
 
           if (!socket) {
-            alert("Error: There is no socket connection.");
+            alert('Error: There is no socket connection.');
             return false;
           }
 
-          socket.send(JSON.stringify({"Message": msgBox.value}));
-          msgBox.value = "";
+          socket.send(JSON.stringify({'Message': msgBox.value}));
+          msgBox.value = '';
           return false;
         }
 
-        if (!window["WebSocket"]) {
-          alert("Error: Your browser does not support web sockets.");
+        if (!window['WebSocket']) {
+          alert('Error: Your browser does not support web sockets.');
         } else {
           var protocol = ('https:' == document.location.protocol ? 'wss://' : 'ws://');
-          socket = new WebSocket(protocol+"{{.Host}}/room");
-          connStatus.innerHTML = "Connected";
+          socket = new WebSocket(protocol+'{{.Host}}/room');
+          connStatus.innerHTML = 'Connected';
 
           socket.onclose = function() {
-            connStatus.innerHTML = "Disconnected";
+            connStatus.innerHTML = 'Disconnected';
           }
           socket.onmessage = function(evt) {
             var msg = JSON.parse(evt.data);
@@ -55,7 +55,7 @@
             var msgContainer = document.createElement('li');
             var msgUser = document.createElement('strong');
             var msgText = document.createElement('span');
-            msgUser.innerHTML = msg.Name + ": ";
+            msgUser.innerHTML = msg.Name + ': ';
             msgText.innerHTML = msg.Message;
 
             msgContainer.appendChild(msgUser);
