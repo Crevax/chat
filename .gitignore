@@ -16,3 +16,4 @@
 # Local environment
 .env
 Procfile
+.vscode
