@@ -9,7 +9,7 @@
   <body>
     <ul id="messages"></ul>
     <form id="chatbox">
-      {{ .UserData.name }}:
+      {{ .UserData.name }}: <span class="connection-status">Disconnected</span>
       <br>
       <textarea></textarea>
       <input type="submit" value="Send" />
@@ -21,6 +21,7 @@
         var chatbox = document.getElementById("chatbox");
         var msgBox = chatbox.getElementsByTagName("textarea")[0];
         var messages = document.getElementById("messages");
+        var connStatus = document.getElementsByClassName("connection-status")[0];
 
         chatbox.onsubmit = function(evt) {
           evt.preventDefault();
@@ -43,9 +44,10 @@
         } else {
           var protocol = ('https:' == document.location.protocol ? 'wss://' : 'ws://');
           socket = new WebSocket(protocol+"{{.Host}}/room");
+          connStatus.innerHTML = "Connected";
 
           socket.onclose = function() {
-            alert("Connection has been closed");
+            connStatus.innerHTML = "Disconnected";
           }
           socket.onmessage = function(evt) {
             var msg = JSON.parse(evt.data);
